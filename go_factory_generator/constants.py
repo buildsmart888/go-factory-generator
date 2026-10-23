@@ -1,5 +1,5 @@
 PLUGIN_KEY = "go_factory_generator"
-PLUGIN_VERSION = "0.2.3"
+PLUGIN_VERSION = "0.3.0"
 
 LAYER_COLORS = {
     "GO-FAC-COLUMN": (0.10, 0.35, 0.90),
@@ -13,6 +13,11 @@ LAYER_COLORS = {
     "GO-FAC-MEZZ": (0.12, 0.55, 0.75),
     "GO-FAC-ENDWALL": (0.55, 0.55, 0.20),
     "GO-FAC-LEAN": (0.15, 0.55, 0.45),
+    "GO-FAC-HIP": (0.80, 0.40, 0.10),
+    "GO-FAC-GABLEWALL": (0.45, 0.30, 0.60),
+    "GO-FAC-SKYLIGHT": (0.30, 0.75, 0.85),
+    "GO-FAC-SUBTRUSS": (0.20, 0.60, 0.55),
+    "GO-FAC-ROOFBRACE": (0.70, 0.25, 0.35),
 }
 
 CATEGORY_TO_LAYER = {
@@ -27,4 +32,10 @@ CATEGORY_TO_LAYER = {
     "Mezzanine Beam": "GO-FAC-MEZZ",
     "End-wall Member": "GO-FAC-ENDWALL",
     "Lean-to Member": "GO-FAC-LEAN",
+    "Hip/Valley Rafter": "GO-FAC-HIP",
+    "Gable Wall Frame": "GO-FAC-GABLEWALL",
+    "Skylight": "GO-FAC-SKYLIGHT",
+    "Main Truss": "GO-FAC-TRUSS",
+    "Sub Truss": "GO-FAC-SUBTRUSS",
+    "Roof Bracing": "GO-FAC-ROOFBRACE",
 }

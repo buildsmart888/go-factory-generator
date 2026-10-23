@@ -1,1 +1,2 @@
 67d0eae4cdef2278e8bcfba71e0c426bd48c007e5199808b26eea9d430ec7499  dist/go_factory_generator-v0.2.3.zip
+17f8db4b9e3946763f050097992667217d8e80b76cfb43557ec39147e5f5a273  dist/go_factory_generator-v0.3.0.zip

@@ -45,6 +45,8 @@ def _box(mesh, length, width, depth, attrs):
 
 
 def _i_section(mesh, length, depth, width, web, flange, attrs):
+    # Three rectangular solids share the same prototype mesh; this is robust in 0.x
+    # and visually reads as an I/H section without relying on boolean operations.
     _box_offset(mesh, length, width, flange, 0, +(depth-flange)/2, attrs)
     _box_offset(mesh, length, width, flange, 0, -(depth-flange)/2, attrs)
     _box_offset(mesh, length, web, max(depth-2*flange, .001), 0, 0, attrs)
@@ -87,6 +89,36 @@ def _channel(mesh, length, depth, width, t, attrs, zed=False):
     _box_offset(mesh, length, width, t, -sign*0, -(depth-t)/2, attrs)
 
 
+def _hollow(mesh, length, depth, width, t, attrs):
+    # Rectangular / square hollow section approximated by 4 wall plates
+    # (top, bottom, two sides). Reads as a closed tube without booleans.
+    t = max(t, 0.002)
+    _box_offset(mesh, length, width, t, 0, +(depth-t)/2, attrs)
+    _box_offset(mesh, length, width, t, 0, -(depth-t)/2, attrs)
+    _box_offset(mesh, length, t, max(depth-2*t, .001), +(width-t)/2, 0, attrs)
+    _box_offset(mesh, length, t, max(depth-2*t, .001), -(width-t)/2, 0, attrs)
+
+
+def _flat(mesh, length, width, t, attrs):
+    # Flat bar / plate: a single centred box of width x thickness.
+    _box(mesh, length, width, max(t, .002), attrs)
+
+
+def _cylinder(mesh, length, diameter, attrs, seg=16):
+    # Solid round bar: outer surface plus two fan caps.
+    r = max(diameter, .002) / 2.0
+    ring0 = [v(0, r*math.cos(2*math.pi*i/seg), r*math.sin(2*math.pi*i/seg)) for i in range(seg)]
+    ring1 = [v(length, p.y(), p.z()) for p in ring0]
+    for i in range(seg):
+        j = (i+1) % seg
+        _face(mesh, [ring0[i], ring0[j], ring1[j], ring1[i]], attrs)
+    c0 = v(0, 0, 0); c1 = v(length, 0, 0)
+    for i in range(seg):
+        j = (i+1) % seg
+        _face(mesh, [c0, ring0[j], ring0[i]], attrs)
+        _face(mesh, [c1, ring1[i], ring1[j]], attrs)
+
+
 def make_prototype(section, length: float, color, layer: str, material: str) -> Mesh:
     mesh = Mesh()
     attrs = {"color": tuple(color), "layer": layer, "mat": material}
@@ -97,11 +129,18 @@ def make_prototype(section, length: float, color, layer: str, material: str) -> 
     elif fam in ("C", "Z"):
         _channel(mesh, length, section.depth_m, section.width_m,
                  max(section.thickness_m,.002), attrs, zed=(fam=="Z"))
-    elif fam == "L":
+    elif fam in ("L", "LU"):
         _angle(mesh, length, section.depth_m, section.width_m,
                max(section.thickness_m,.003), attrs)
+    elif fam in ("RHS", "SHS"):
+        _hollow(mesh, length, section.depth_m, section.width_m,
+                section.thickness_m, attrs)
     elif fam == "PIPE":
         _pipe(mesh, length, section.width_m, max(section.thickness_m,.002), attrs)
+    elif fam == "FB":
+        _flat(mesh, length, section.width_m, section.thickness_m, attrs)
+    elif fam == "RB":
+        _cylinder(mesh, length, section.width_m, attrs)
     elif fam == "PLATE":
         _box(mesh, length, section.width_m, section.depth_m, attrs)
     else:

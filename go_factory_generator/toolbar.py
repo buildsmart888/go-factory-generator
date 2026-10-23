@@ -22,6 +22,7 @@ def _icon(kind: str) -> QIcon:
     p.setBrush(Qt.BrushStyle.NoBrush)
 
     if kind == "create":
+        # factory portal + roof
         p.drawLine(7, 34, 7, 19); p.drawLine(37, 34, 37, 19)
         p.drawLine(7, 19, 22, 9); p.drawLine(22, 9, 37, 19)
         p.drawLine(12, 34, 12, 23); p.drawLine(32, 34, 32, 23)
@@ -40,7 +41,7 @@ def _icon(kind: str) -> QIcon:
         for y in (16, 24, 32): p.drawLine(8, y, 36, y)
         p.drawLine(19, 8, 19, 36); p.drawLine(28, 8, 28, 36)
         p.setBrush(accent); p.drawRect(21, 26, 5, 4)
-    else:
+    else:  # rebuild
         p.setPen(QPen(dark, 2.8))
         p.drawArc(8, 8, 28, 28, 35*16, 275*16)
         p.setBrush(dark)
