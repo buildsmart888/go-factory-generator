@@ -1,11 +1,11 @@
 id = "go_factory_generator"
-version = "0.2.3-rc1"
+version = "0.2.3"
 author = "GO Engineering"
 author_url = "https://github.com/buildsmart888"
 license = "Apache-2.0"
 repository = "https://github.com/buildsmart888/go-factory-generator"
-download = "https://raw.githubusercontent.com/buildsmart888/go-factory-generator/d2f071a2d5e2e27ea1343551e7a9fd47cf295e89/dist/go_factory_generator-v0.2.3-rc1.zip"
-sha256 = "c9eeab37c517850b94260f3552f3990560cbfc0a5d5b9efa01ebd673f71defe4"
+download = "https://raw.githubusercontent.com/buildsmart888/go-factory-generator/bd83e7c17cab84f47f1a7ae4612f68e08936ca6e/dist/go_factory_generator-v0.2.3.zip"
+sha256 = "67d0eae4cdef2278e8bcfba71e0c426bd48c007e5199808b26eea9d430ec7499"
 ingetrazo = "0.5.9"
 tags = ["structures", "bim", "fabrication", "productivity"]
 
