@@ -1,11 +1,11 @@
 id = "go_factory_generator"
-version = "0.2.3"
+version = "0.3.0"
 author = "GO Engineering"
 author_url = "https://github.com/buildsmart888"
 license = "Apache-2.0"
 repository = "https://github.com/buildsmart888/go-factory-generator"
-download = "https://raw.githubusercontent.com/buildsmart888/go-factory-generator/bd83e7c17cab84f47f1a7ae4612f68e08936ca6e/dist/go_factory_generator-v0.2.3.zip"
-sha256 = "67d0eae4cdef2278e8bcfba71e0c426bd48c007e5199808b26eea9d430ec7499"
+download = "https://raw.githubusercontent.com/buildsmart888/go-factory-generator/c41563f22d78d2f85b43acca6c856ecc971c73cf/dist/go_factory_generator-v0.3.0.zip"
+sha256 = "17f8db4b9e3946763f050097992667217d8e80b76cfb43557ec39147e5f5a273"
 ingetrazo = "0.5.9"
 tags = ["structures", "bim", "fabrication", "productivity"]
 
@@ -15,6 +15,6 @@ en = "GO Factory Generator"
 pt = "GO Factory Generator"
 
 [summary]
-es = "Generador paramétrico de naves metálicas con perfiles, componentes, capas, colores y medición de cantidades."
-en = "Parametric steel factory and warehouse generator with sections, components, layers, colors and quantity takeoff."
-pt = "Gerador paramétrico de galpões metálicos com perfis, componentes, camadas, cores e levantamento de quantidades."
+es = "Generador paramétrico de naves y galpones metálicos: cubiertas (a dos aguas, curva, hipsa, diente de sierra, cruz), cerchas (Pratt, Howe, Warren, Fink, curvas), riostras, perfiles y medición de cantidades."
+en = "Parametric steel factory/warehouse generator: roof shapes (gable, mono, hip, gambrel, arched, sawtooth, cross-gable), 14 truss types, bracing, expanded sections and quantity takeoff."
+pt = "Gerador paramétrico de galpões metálicos: coberturas (duas águas, Shed, hip, serra, cruz), 14 tipos de tesouras, contraventamento, perfis e levantamento de quantidades."
