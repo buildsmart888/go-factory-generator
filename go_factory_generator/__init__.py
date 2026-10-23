@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: Apache-2.0
 """GO Factory Generator v0.2.3 for IngeTrazo 0.5.9+."""
 from __future__ import annotations
 import logging
