@@ -1,0 +1,20 @@
+id = "go_factory_generator"
+version = "0.2.3-rc1"
+author = "GO Engineering"
+author_url = "https://github.com/buildsmart888"
+license = "Apache-2.0"
+repository = "https://github.com/buildsmart888/go-factory-generator"
+download = "https://raw.githubusercontent.com/buildsmart888/go-factory-generator/d2f071a2d5e2e27ea1343551e7a9fd47cf295e89/dist/go_factory_generator-v0.2.3-rc1.zip"
+sha256 = "c9eeab37c517850b94260f3552f3990560cbfc0a5d5b9efa01ebd673f71defe4"
+ingetrazo = "0.5.9"
+tags = ["structures", "bim", "fabrication", "productivity"]
+
+[name]
+es = "GO Factory Generator"
+en = "GO Factory Generator"
+pt = "GO Factory Generator"
+
+[summary]
+es = "Generador paramétrico de naves metálicas con perfiles, componentes, capas, colores y medición de cantidades."
+en = "Parametric steel factory and warehouse generator with sections, components, layers, colors and quantity takeoff."
+pt = "Gerador paramétrico de galpões metálicos com perfis, componentes, camadas, cores e levantamento de quantidades."
