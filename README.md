@@ -2,6 +2,10 @@
 
 Parametric steel factory / warehouse generator for IngeTrazo.
 
+## Screenshort
+<img width="1898" height="1013" alt="Screenshot 2026-10-23 222615" src="https://github.com/user-attachments/assets/7f76e674-b4f2-40eb-b9c9-16139c7b64ad" />
+
+
 ## Status
 
 **v0.2.3** — runtime acceptance passed on IngeTrazo 0.5.9 (toolbar, generation, settings, takeoff and rebuild).
