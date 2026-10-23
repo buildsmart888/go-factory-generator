@@ -4,7 +4,7 @@ Parametric steel factory / warehouse generator for IngeTrazo.
 
 ## Status
 
-**v0.2.3 Release Candidate** — targeted at IngeTrazo 0.5.9. Public catalog release should follow runtime acceptance in IngeTrazo.
+**v0.2.3** — runtime acceptance passed on IngeTrazo 0.5.9 (toolbar, generation, settings, takeoff and rebuild).
 
 ## Current capabilities
 
