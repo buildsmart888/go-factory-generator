@@ -20,15 +20,60 @@ Parametric steel factory / warehouse generator for IngeTrazo.
 - GO Factory toolbar: Create, Settings, Takeoff and Rebuild
 - Undoable scene mutation through IngeTrazo history
 
-## Installation (development / local test)
+## Installation
 
-Copy the `go_factory_generator` folder into the per-user IngeTrazo plugins directory and restart IngeTrazo.
+### Recommended: IngeTrazo Community Catalog
 
-Windows:
+Once the extension is published in the IngeTrazo Community catalog:
+
+1. Open IngeTrazo.
+2. Open the Extensions manager.
+3. Find **GO Factory Generator**.
+4. Install it and restart IngeTrazo.
+
+### Windows manual installer
+
+For direct installation from this repository:
+
+1. Download or clone this repository.
+2. Close IngeTrazo completely.
+3. Double-click `install_windows.cmd`.
+4. Wait for `SUCCESS`.
+5. Reopen IngeTrazo and look for the **GO Factory** toolbar.
+
+The installer copies:
+
+```text
+go_factory_generator/
+```
+
+to:
 
 ```text
 %APPDATA%\ingetrazo\plugins\go_factory_generator
 ```
+
+If an older installation exists, it is backed up under:
+
+```text
+%APPDATA%\ingetrazo\go_factory_backups\
+```
+
+To remove the manually installed extension, close IngeTrazo and run:
+
+```text
+uninstall_windows.cmd
+```
+
+### Development / local test
+
+You can also copy the `go_factory_generator` folder manually into:
+
+```text
+%APPDATA%\ingetrazo\plugins\go_factory_generator
+```
+
+and restart IngeTrazo.
 
 For public Community installation, use the versioned ZIP from `dist/`; it contains exactly one plugin folder with `__init__.py`.
 
