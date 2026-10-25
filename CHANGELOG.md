@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.1 - 2026-10-25
+
+- Converted all remaining GO Factory toolbar labels and tooltips to English for international Community distribution.
+- Standardized the public extension UI and messaging as English-only.
+- Corrected the package SPDX identifier to Apache-2.0 so source metadata matches the repository and Community catalog license.
+- No modelling, geometry, analysis or takeoff algorithms were intentionally changed in this patch.
+
 ## 0.3.0 - 2026-10-24
 
 - Roof shapes: added Hip (hip/valley jack rafters + purlins on all 4 faces), Gambrel, Arched (barrel vault), Sawtooth (monitor) and Cross Gable (true 45° valleys with trimmed jack rafters).
