@@ -1,5 +1,5 @@
 PLUGIN_KEY = "go_factory_generator"
-PLUGIN_VERSION = "0.3.0"
+PLUGIN_VERSION = "0.3.1"
 
 LAYER_COLORS = {
     "GO-FAC-COLUMN": (0.10, 0.35, 0.90),
