@@ -106,10 +106,10 @@ def install_toolbar(app):
 
     submenu = app.add_menu("GO Factory Generator")
     entries = [
-        ("create", "สร้างโรงงาน", "เปิดตัวสร้างโมเดลโรงงาน / Factory Builder", lambda: _open_tab(app, 0)),
-        ("settings", "ตั้งค่า", "ตั้งค่าโครงสร้าง Section, Layer และสี", lambda: _open_tab(app, 2)),
-        ("takeoff", "ปริมาณงาน", "อ่าน BOQ / Takeoff จาก GO Factory members ใน Scene", lambda: _takeoff(app)),
-        ("rebuild", "Rebuild", "สร้าง Factory ใหม่จากค่าปัจจุบันใน Dialog", lambda: _rebuild(app)),
+        ("create", "Factory Builder", "Open the parametric steel factory builder", lambda: _open_tab(app, 0)),
+        ("settings", "Settings", "Configure sections, layers, colors and modelling options", lambda: _open_tab(app, 2)),
+        ("takeoff", "Quantity Takeoff", "Read BOQ / quantity takeoff from GO Factory members in the current scene", lambda: _takeoff(app)),
+        ("rebuild", "Rebuild", "Rebuild the factory using the current dialog settings", lambda: _rebuild(app)),
     ]
 
     for i, (key, label, tip, callback) in enumerate(entries):
