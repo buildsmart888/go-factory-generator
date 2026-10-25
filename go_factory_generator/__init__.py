@@ -1,11 +1,11 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
-"""GO Factory Generator v0.3.0 for IngeTrazo 0.5.9+."""
+# SPDX-License-Identifier: Apache-2.0
+"""GO Factory Generator v0.3.1 for IngeTrazo 0.5.9+."""
 from __future__ import annotations
 import logging
 
 log = logging.getLogger("ingetrazo.plugins.go_factory_generator")
 PLUGIN_KEY = "go_factory_generator"
-PLUGIN_VERSION = "0.3.0"
+PLUGIN_VERSION = "0.3.1"
 
 
 def _register_browser_metadata(app):
@@ -37,8 +37,8 @@ def _register_browser_metadata(app):
 
 def setup(app):
     if getattr(app, "api_version", 0) < 2:
-        raise RuntimeError("GO Factory Generator v0.3.0 requires Extension API_VERSION >= 2")
+        raise RuntimeError("GO Factory Generator v0.3.1 requires Extension API_VERSION >= 2")
     from .toolbar import install_toolbar
     install_toolbar(app)
     _register_browser_metadata(app)
-    log.info("GO Factory Generator v0.3.0 loaded")
+    log.info("GO Factory Generator v0.3.1 loaded")
