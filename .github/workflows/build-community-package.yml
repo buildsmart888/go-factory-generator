@@ -8,6 +8,8 @@ on:
       - "LICENSE"
       - "NOTICE"
       - ".github/workflows/build-community-package.yml"
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -111,7 +113,17 @@ jobs:
           sums.write_text("\n".join(existing) + "\n", encoding="utf-8")
           PY
 
+      - name: Upload Community package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: go-factory-generator-v${{ env.VERSION }}
+          path: |
+            dist/go_factory_generator-v${{ env.VERSION }}.zip
+            dist/SHA256SUMS.txt
+          if-no-files-found: error
+
       - name: Commit generated package
+        if: github.event_name == 'push'
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
