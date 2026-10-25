@@ -2,25 +2,25 @@
 
 Parametric steel factory / warehouse generator for IngeTrazo.
 
-## Screenshort
+## Screenshot
 <img width="1898" height="1013" alt="Screenshot 2026-10-23 222615" src="https://github.com/user-attachments/assets/7f76e674-b4f2-40eb-b9c9-16139c7b64ad" />
 
 
 ## Status
 
-**v0.2.3** — runtime acceptance passed on IngeTrazo 0.5.9 (toolbar, generation, settings, takeoff and rebuild).
+**v0.3.1** — English-only Community patch based on the tested v0.3.0 release for IngeTrazo 0.5.9.
 
 ## Current capabilities
 
 - Parametric factory geometry: width, length, bays, eave height and roof rise
 - Portal frame / truss-oriented steel member generation
-- Gable and mono-slope roof options
+- Roof shapes: Gable, Mono-slope, Hip, Gambrel, Arched, Sawtooth and Cross Gable
 - Columns, rafters, truss members, purlins, girts and bracing
 - Optional centre columns, crane runway, mezzanine, lean-to and end-wall framing
 - Group / Component generation using IngeTrazo containers
 - Layers and per-category colors
-- Starter steel section library (H/WF/C/Z/Angle/Pipe/Plate)
-- Quantity takeoff from extension metadata
+- Expanded steel section library covering H/WF, C/Z, angles, RHS/SHS, flat/round bar, pipe and plate
+- Metadata-based quantity takeoff with connection allowance, wastage and CSV export
 - GO Factory toolbar: Create, Settings, Takeoff and Rebuild
 - Undoable scene mutation through IngeTrazo history
 
