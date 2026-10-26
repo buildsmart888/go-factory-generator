@@ -10,6 +10,7 @@ from PySide6.QtWidgets import (QCheckBox,QColorDialog,QComboBox,QDialog,QDoubleS
 from core.history import SnapshotImport
 from .constants import LAYER_COLORS, PLUGIN_VERSION
 from .sections import SECTION_LIBRARY, DEFAULT_SECTION_BY_ROLE
+from .engineering_core import catalog_info
 from .generator import build_factory
 from .truss import TRUSS_TYPES, truss_nodes, truss_members, _interp
 from .takeoff import summarize, collect_scene_records
@@ -234,7 +235,7 @@ class FactoryDialog(QDialog):
                     ("Lean-to side",self.lean_side),("Lean-to width (m)",self.lean_w),("Lean-to drop (m)",self.lean_drop)]: of.addRow(a,b)
         self.tabs.addTab(self._scroll(opt),"Options")
 
-        s=QWidget(); sg=QGridLayout(s); headers=["Role","Section","Family","Depth","Width","kg/m"]
+        s=QWidget(); sg=QGridLayout(s); headers=["Role","Section","Family","Depth","Width","kg/m*"]
         for i,h in enumerate(headers): sg.addWidget(QLabel(f"<b>{h}</b>"),0,i)
         self.sec_boxes={}
         self._sections_grid = sg
@@ -244,6 +245,13 @@ class FactoryDialog(QDialog):
             self.sec_boxes[role]=box; sg.addWidget(QLabel(role.title()),r,0); sg.addWidget(box,r,1)
             for c in range(2,6): sg.addWidget(QLabel(""),r,c)
             self._sync_sec_row(r,box)
+        catalog_label = QLabel(
+            f"GO Engineering Core {catalog_info()['version']} / {catalog_info()['count']} nominal profiles. "
+            "All listed kg/m values are APPROXIMATE/UNVERIFIED; dimensional "
+            "section properties and source documentation must be checked before design or procurement."
+        )
+        catalog_label.setWordWrap(True)
+        sg.addWidget(catalog_label, len(roles) + 1, 0, 1, 6)
         self.tabs.addTab(self._scroll(s),"Sections")
 
         c=QWidget(); cg=QGridLayout(c); self.color_btn={}; cg.addWidget(QLabel("<b>Layer</b>"),0,0); cg.addWidget(QLabel("<b>Color</b>"),0,1)
