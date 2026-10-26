@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "go-engineering-core"
+version = "0.1.0"
+description = "GO Engineering solver-neutral steel section catalog (nominal, not design verified)"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [{name = "GO Engineering"}]
+readme = "README.md"
+classifiers = ["Programming Language :: Python :: 3"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["go_engineering_core*"]
+
+[tool.setuptools.package-data]
+go_engineering_core = ["steel_sections_v1.json"]
