@@ -22,6 +22,8 @@ def _register_browser_metadata(app):
             "props": [
                 ("Mark", str(meta.get("mark", ""))),
                 ("Section", str(meta.get("section", ""))),
+                ("Catalog", str(meta.get("section_catalog_version", "legacy (unversioned)"))),
+                ("Properties", str(meta.get("section_property_status", "not verified"))),
                 ("Category", str(meta.get("category", ""))),
                 ("Length", f"{float(meta.get('length_m', 0.0)):.3f} m"),
                 ("Weight", f"{float(meta.get('weight_kg', 0.0)):.1f} kg"),
