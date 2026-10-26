@@ -3,6 +3,8 @@
 Parametric steel factory / warehouse generator for IngeTrazo.
 
 ## Screenshot
+<img width="1586" height="992" alt="image" src="https://github.com/user-attachments/assets/2203b93a-e1bc-41fc-a3ad-b58e26fb7c8c" />
+
 <img width="1898" height="1013" alt="Screenshot 2026-10-23 222615" src="https://github.com/user-attachments/assets/7f76e674-b4f2-40eb-b9c9-16139c7b64ad" />
 
 
