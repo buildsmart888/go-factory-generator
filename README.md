@@ -1,5 +1,26 @@
 # GO Factory Generator for IngeTrazo
 
+## 🚧 GO Factory v0.3.2-preview — Shared Steel Catalog
+
+**Feature branch, not a public Release.** Adds GO Engineering Core v0.1:
+75 stable section IDs and nominal geometry metadata, with a SHA-256-pinned
+catalog shared with GO anaStruct. Section masses remain unverified estimates;
+40 H/WF/RHS/SHS/PIPE sections have nominal area/axis inertias available to the
+analysis bridge only after explicit confirmation.
+
+- [Preview ZIP](dist/go_factory_generator-v0.3.2-preview.zip) and [SHA-256](dist/go_factory_generator-v0.3.2-preview.zip.sha256)
+- [Preview installer](install_preview_032_windows.cmd)
+- [Windows QA runner](RUN_GO_CORE_032_TESTS_WINDOWS.cmd)
+- [GO Engineering Core v0.1 contract](docs/GO_ENGINEERING_CORE_V01.md)
+- Companion anaStruct branch: [GO anaStruct v0.5.7-preview](https://github.com/buildsmart888/go-anastruct-2d/tree/feat/v057-go-steel-catalog)
+
+Close IngeTrazo 0.5.9, download the **complete branch ZIP** and run the
+preview installer from that folder. Restart IngeTrazo and regenerate Factory 01
+to stamp catalog metadata onto newly generated 3D members. Do not use this
+unverified catalog for procurement or engineering design.
+
+---
+
 Parametric steel factory / warehouse generator for IngeTrazo.
 
 ## Screenshot
