@@ -7,6 +7,7 @@ from core import bim
 from .constants import PLUGIN_KEY, PLUGIN_VERSION, CATEGORY_TO_LAYER
 from .geometry import v, make_prototype, place_member
 from .models import MemberRecord
+from .engineering_core import section_identity
 from .truss import main_truss, top_bracing, bottom_bracing, vertical_bracing, sub_truss, truss_nodes
 
 
@@ -169,6 +170,7 @@ def build_factory(scene, cfg):
             "weight_kg": float(length * sec.unit_weight_kg_m),
             "start": [a.x(), a.y(), a.z()], "end": [b.x(), b.y(), b.z()],
             "container": "Component" if as_component else "Group",
+            **section_identity(sec.name),
         }
         g.ext = {PLUGIN_KEY: meta}
         try:
